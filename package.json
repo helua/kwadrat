@@ -1,0 +1,17 @@
+{
+  "name": "kwadrat.io",
+  "version": "1.0.0",
+  "description": "Sztuczna inteligencja do projektowania wnętrz",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Helio",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.9.0"
+  },
+  "dependencies": {
+    "live-server": "^1.2.0"
+  }
+}

@@ -1,0 +1,80 @@
+.header{
+	height:95vh;
+	background-image: linear-gradient(
+		to right bottom, 
+		rgba($color-primary-light, 0.8), 
+		rgba($color-primary-dark, 0.9)), 
+		url(../img/header.jpg);
+	background-size: cover;
+	background-position: top;
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+	clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+	position: relative;
+
+	
+	
+	
+
+		&__logo-box{
+			position: absolute;
+			top: 7rem;
+			left: 7rem;
+			height: 10rem;
+			width: 10rem;
+			border: 1rem solid $color-white;
+			box-shadow: 2rem 0 10rem rgba($color-primary-dark, 0.9);
+			transition: all 2s ease-out;
+			z-index: 200;
+
+			&--architect{
+				position: absolute;
+				top: 7rem;
+				left: 7rem;
+				height: 10rem;
+				width: 10rem;
+				border: 1rem solid $color-white;
+				box-shadow: 2rem 0 10rem rgba($color-secondary-dark, 0.9);
+				transition: all 2s ease-out;
+				z-index: 200;
+			}
+
+			
+			
+		}
+
+		&__logo{
+			height: 100%;
+			width: 100%;
+
+			&:hover{
+				transform: scale(1.4);
+
+			}
+		}
+
+		&__text-box{
+			position: absolute;
+			top: 40%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+			
+		}
+
+		&--architect{
+
+			height:95vh;
+			background-image: linear-gradient(
+				to right bottom, 
+				rgba($color-secondary, 0.8), 
+				rgba($color-secondary, 0.9)), 
+				url(../img/header.jpg);
+			background-size: cover;
+			background-position: top;
+			-webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+			clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+			position: relative;
+
+			
+}
+}

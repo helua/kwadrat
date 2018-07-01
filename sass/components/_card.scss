@@ -1,0 +1,156 @@
+.card{
+//FUNCTIONALITY
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    
+    height: 52rem;
+
+    &__side{
+
+    width: 100%;
+    height: 52rem;
+    font-size: 2rem;
+    position: absolute;
+    transition: all .8s ease;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .3);
+
+    &--front{
+
+        background-color: $color-white;
+
+    }
+
+    &--back{
+        transform: rotateY(180deg);
+        &--1{
+            background-image: linear-gradient(to right bottom, rgba($color-contrasting-1, .9), rgba($color-contrasting-dark-1, .9));
+            
+        }
+
+        &--2{
+            background-image: linear-gradient(to right bottom, rgba($color-contrasting-2, .9), rgba($color-contrasting-dark-2, .9));
+        }
+
+        &--3{
+            background-image: linear-gradient(to right bottom, rgba($color-contrasting-3, .9), rgba($color-contrasting-dark-3, .9));
+        } 
+    }
+   
+    }
+
+    &:hover &__side--front{
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back{
+        transform: rotateY(0);
+    }
+
+
+
+//FRONT SIDE STYLING
+    &__picture{
+        background-size: cover;
+        height: 22rem;
+        background-blend-mode: multiply;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+       
+        
+
+        &--1{
+            background-image: url(../img/price-1.jpg), linear-gradient(to right bottom, rgba($color-white, .9), rgba($color-contrasting-dark-1, .9));
+            
+        }
+
+        &--2{
+            background-image: url(../img/price-2.jpg), linear-gradient(to right bottom, rgba($color-white, .9), rgba($color-contrasting-dark-2, .9));
+        }
+
+        &--3{
+            background-image: url(../img/price-3.jpg), linear-gradient(to right bottom, rgba($color-white, .9), rgba($color-contrasting-dark-3, .9));
+        }   
+    }
+
+    &__heading{
+        font-size: 3rem;
+        color: $color-white;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: right;
+        position: absolute;
+        top: 12rem;
+        right: 2rem;
+        width: 75%;
+
+
+    }
+    &__heading-span{
+        padding: 1rem 1.5rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+
+        &--1{
+            background-image: linear-gradient(to right bottom, rgba($color-contrasting-1, .85), rgba($color-contrasting-dark-1, .85));
+            
+        }
+
+        &--2{
+            background-image: linear-gradient(to right bottom, rgba($color-contrasting-2, .85), rgba($color-contrasting-dark-2, .85));
+        }
+
+        &--3{
+            background-image: linear-gradient(to right bottom, rgba($color-contrasting-3, .85), rgba($color-contrasting-dark-3, .85));
+        } 
+    }
+
+    &__details{
+        padding: 3rem;
+        ul{
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+
+            li{
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+
+                &:not(:last-child){
+                    border-bottom: 1px solid $color-grey-light;
+                }
+            }
+        }
+    }
+//BACK SIDE STYLING
+    &__cta{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+    }
+
+    &__price-box{
+        
+        color: $color-white;
+        margin-bottom: 8rem;
+    }
+
+    &__price-only{
+        font-size: 1.6rem;
+    }
+
+    &__price-value{
+        font-size: 6rem;
+        font-weight: 100;
+
+    }
+
+}
+
